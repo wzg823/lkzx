@@ -1,0 +1,93 @@
+.title-view{
+	width: 100%;
+	height: 180rpx;
+	background-color: #22233A;
+	padding-top: 20rpx;
+}
+.title-view image{
+	display: block;
+	width: 80rpx;
+	height: 80rpx;
+	border-radius: 40rpx;
+	margin: 0 auto;
+}
+.title-view text{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 30rpx;
+}
+.calendar{
+	width: 100%;
+	/*background-color: #22233A;*/
+	margin-top: 10rpx;
+}
+.calendar .date{
+	height: 120rpx;
+	width: 100%;
+	background-color: #22233A;
+} 
+.calendar .date .date-item{
+	float: left;
+	width: calc(100% / 7);
+	height: 100%;
+}
+.date-item text{
+	display: block;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 50rpx;
+	height: 50%;
+}
+.date-item .today{
+	border-bottom: 2px solid #FF904C;
+}
+.calendar .time{
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	justify-content:flex-start;
+	margin-top: 2px;
+	background-color: #22233A;
+	padding: 50rpx 18rpx 50rpx 22rpx;
+	height: 300rpx;
+	align-content: space-between;
+	overflow: scroll;
+}
+.time .time-item{
+	border: 1rpx solid #BAB9C7;
+	color: #BAB9C7;
+	white-space: nowrap;
+	margin: 20rpx 25rpx;
+	padding: 0rpx 20rpx;
+	font-size: 26rpx;
+	height: 50rpx;
+	line-height: 50rpx;
+	border-radius: 6rpx;
+}
+.time .choseTime{
+	color: #FF904C;
+	border: 1rpx solid #FF904C;
+}
+.time .enableTime{
+	color: #5D5C6A;
+	border: 1rpx solid #5D5C6A;
+}
+button{
+	width: 90%;
+	margin: 20rpx auto;
+	background-color: #FF904C;
+	border-radius: 1rpx;
+	color: #fff;
+}
+.no-class{
+	height: 300rpx;
+	padding: 0rpx 20rpx;
+	margin-top: 2px;
+	text-align: center;
+	line-height: 300rpx;
+	background-color: #22233A;
+	font-size: 26rpx;
+	color: #BAB9C7;
+}

@@ -1,0 +1,95 @@
+/* pages/club/memberActivities.wxss */
+
+/*@import '../../templates/club-item/club-item.wxss';*/
+
+
+.clearfix {
+  overflow: auto;
+  _height: 1%;
+}
+.limit-activities-item{
+	width: calc(100% - 60rpx);
+	padding: 10rpx 30rpx 0;
+	background:rgba(34,35,58,1);
+	margin-top: 20rpx;
+}
+.limit-activities-banner{
+	position: relative;
+	width: 100%;
+	height: 350rpx;
+	overflow: hidden;
+}
+.limit-activities-img{
+	width: 100%;
+	height: 100%;
+}
+.limit-activities-block{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 55rpx;
+	background-color: rgba(0,0,0,0.4);
+	padding-top: 5rpx;
+}
+.limit-activities-surplus{
+	background:rgba(255,144,76,1);
+	padding: 5rpx 12rpx;
+	font-size: 24rpx;
+	line-height: 21rpx;
+	border-radius: 6px; 
+	margin-left: 20rpx;
+	margin-top: 10rpx;
+}
+.limit-activities-status{
+	float: right;
+	height: 55rpx;
+	line-height: 55rpx;
+	margin-right: 20rpx;
+	font-size: 24rpx;
+}
+.limit-activities-content{
+	margin-top: 20rpx;
+	padding-bottom: 20rpx;
+}
+.limit-activities-content >text{
+	width: 100%;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.activite-title{
+	font-size: 30rpx;
+}
+.activite-introduce{
+	font-size: 24rpx;
+	color:rgba(186,185,199,1);
+}
+.activite-price{
+	position: relative;
+}
+.newPrice{
+	color:rgba(228,72,55,1);
+	font-size: 36rpx;
+}
+.oldPrice{
+	color:rgba(186,185,199,1);
+	font-size: 30rpx;
+	text-decoration: line-through;
+	margin-left: 20rpx;
+}
+.buyNow{
+	position: absolute;
+	bottom: 0;
+	right: 20rpx;
+	width:150rpx;
+	height:60rpx; 
+	border: 1px solid rgba(255,144,76,1);
+	border-radius: 6px;
+	line-height: 60rpx;
+	text-align: center;
+	font-size: 28rpx;
+	color:rgba(255,144,76,1);
+	background-color: rgba(0,0,0,0);
+	padding: 0;
+}

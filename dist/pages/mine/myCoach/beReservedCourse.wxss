@@ -1,0 +1,96 @@
+/* pages/home/myClass.wxss */
+
+.title-view {
+    color: #848296;
+    padding: 20rpx 30rpx;
+}
+.bottom-view {
+    color: #BAB9C7;
+    padding: 15rpx 0;
+}
+.up-view {
+    /*border-bottom: 1rpx #262439 solid;*/
+    padding: 20rpx 0 15rpx;
+}
+.up-view .headimg{
+    width: 130rpx;
+    height: 130rpx;
+    margin-right: 30rpx;
+    float: left;
+    margin-top: 11rpx;
+}
+.info-view .name-text{
+    font-size: 34rpx;
+    margin-bottom: 30rpx;
+    color: white;
+}
+
+.myclass-cell {
+    margin-bottom: 20rpx;
+    padding: 0 30rpx 0;
+    color: #BAB9C7;
+    background-color: #22233A;
+    font-size: 28rpx;
+    height: 250rpx;
+}
+.btn {
+    width: 150rpx;
+    height: 50rpx;
+    line-height: 50rpx;
+    color: #FF904C;
+    border: 1rpx #FF904C solid;
+    border-radius: 6rpx;
+    text-align: center;
+    float: right;
+    margin-top: 80rpx;
+}
+.cancel {
+    color: #BAB9C7;
+    border: 1rpx #BAB9C7 solid;
+}
+.top-view{
+    width: 100%;
+    height: 70rpx;
+}
+.top-view text{
+    height: 70rpx;
+    line-height: 70rpx;
+}
+.top-view text:nth-child(2){
+    float: right;
+    height: 70rpx;
+    line-height: 70rpx;
+    color: #FF904C;
+    font-size: 24rpx;
+}
+.myclass-cell .blank{
+    width: 100%;
+    background-color: #0F1029;
+    height: 2rpx;
+}
+.erwei image{
+    display: block;
+    width: 45rpx;
+    height: 45rpx;
+    margin-top: 50rpx;
+}
+.tap-nav{
+    padding: 0 30rpx;
+    background-color: #22233A;
+}
+.tap-nav >view{
+    line-height: 100rpx;
+    text-align: center;
+    font-size: 32rpx;
+    color: #BAB9C7;
+    float: left;
+    width: 33%;
+    height: 100rpx;
+}
+.clearfix {
+    overflow: auto;
+    _height: 1%;
+}
+.current{
+    border-bottom: 4rpx solid #FF904C;
+}

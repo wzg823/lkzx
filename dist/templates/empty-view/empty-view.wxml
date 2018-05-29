@@ -1,0 +1,11 @@
+
+
+<template name="empty-view">
+
+<view class='no-data-view'>
+  <text>{{ emptyText }}</text>
+  <image class='no-data-icon' 
+        src='{{ emptyIcon }}'></image>
+</view>
+
+</template>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "俱乐部",
+  
+  "usingComponents": {
+    "certificationModal": "../../templates/certificationModal/certificationModal"
+  }
+}

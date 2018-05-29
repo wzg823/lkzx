@@ -1,0 +1,279 @@
+/* pages/club/memberActivitiesDetails.wxss */
+
+.clearfix {
+  overflow: auto;
+  _height: 1%;
+}
+.title-view .img {
+    width: 100%;
+    height: 400rpx;
+}
+.title-view .share-btn {
+    padding: 0;
+    width:60rpx;
+    height:60rpx;
+    position:absolute;
+    top:20rpx;
+    right:2.5%;
+    background-color: rgba(1, 1, 1, 0);
+}
+.title-view .share-btn:after{
+    border-style: none;
+}
+.title-view .share-icon {
+    width: 100%;
+    height: 100%;
+}
+.title-view .down-view {
+    height: 100rpx;
+    line-height: 100rpx;
+    background-color: #FF904C;
+    font-size: 28rpx;
+    text-align: right;
+    padding: 0 2.5%;
+    position: absolute;
+    width: 95%;
+    top: 300rpx;
+}
+.timer-text {
+    width: 45rpx;
+    height: 45rpx;
+    line-height: 45rpx;
+    text-align: center;
+    background-color: white;
+    color: #E44837;
+    display: inline-block;
+    margin-right: 10rpx;
+}
+
+.introduction-view {
+    background-color: #22233A;
+    padding: 20rpx 30rpx 0;
+    font-size: 26rpx;
+    color: #BAB9C7;
+}
+.introduction-view .people-icon {
+    width: 39rpx;
+    height: 26rpx;
+    margin-right: 20rpx;
+    float:left;
+    margin-top:5rpx;
+}
+.introduction-view .intr-text {
+    padding: 15rpx 0;
+}
+
+.card-view {
+    background-color: #22233A;
+    border: 1rpx #262439 solid;
+    border-right-style: none;
+    border-left-style: none;
+    /*padding: 0 0 30rpx;*/
+    position: relative;
+    overflow: hidden;
+}
+.card-view .name-view {
+    height: 200rpx;
+}
+.card-view .card-item {
+    padding: 0 30rpx;
+    /*height: 260rpx;*/
+    /*margin: 30rpx auto 0;*/
+    border-radius: 10rpx;
+    overflow: hidden;
+}
+.card-item-con{
+    height: 340rpx;
+    margin-top: 50rpx;
+}
+.card-view .card-item:first-child{
+    /*margin-top: 0;*/
+}
+.card-item-price{
+    position: relative;
+}
+.card-item-price .newPrice{
+    color:rgba(228,72,55,1);
+    font-size: 36rpx;
+}
+.card-item-price .activePrice{
+    border: 1px solid rgba(228,72,55,1);
+    border-radius: 6px;
+    position: absolute;
+    left: 120rpx;
+    font-size: 20rpx;
+    width: 80rpx;
+    height: 34rpx;
+    line-height: 34rpx;
+    text-align: center;
+    top: 0;
+    color: rgba(228,72,55,1);
+}
+.card-item-price .oldPrice{
+    color:rgba(186,185,199,1);
+    font-size: 30rpx;
+    border:1rpx #BAB9C7 solid;
+    line-height:9rpx;
+    height:6rpx;
+    display:inline-block;
+    padding:0 5rpx;
+    margin-right:30rpx;
+    border-left-style:none;
+    border-right-style:none;
+    margin-left: 150rpx;
+
+}
+.card-item-price .leftKan{
+    color:rgba(255,144,76,1);
+    font-size: 30rpx;
+    float: right;
+}
+.card-item .card-bgimg {
+    width: 600rpx;
+    height: 200rpx;
+    position: absolute;
+    z-index: 0;
+    border-radius: 10rpx;
+}
+.card-view .card-item .name {
+    margin-bottom: 20rpx;
+    font-size: 36rpx;
+}
+.card-view .card-item .name-view {
+    height: 165rpx;
+    margin: 35rpx 30rpx 0;
+    font-size: 28rpx;
+    position: absolute;
+    z-index: 1;
+}
+.card-view .card-item .originalPrice {
+    border:1rpx #BAB9C7 solid;
+    line-height:9rpx;
+    height:6rpx;
+    display:inline-block;
+    padding:0 5rpx;
+    margin-right:30rpx;
+    border-left-style:none;
+    border-right-style:none;
+    color: #BAB9C7;
+}
+.card-view .buy-btn {
+    width: 600rpx;
+    text-align: center;
+    height: 60rpx;
+    background-color: #FF904C;
+    line-height: 60rpx;
+    margin-top: 200rpx;
+}
+
+
+.content-view {
+    padding: 20rpx 30rpx;
+    background-color: #22233A;
+    font-size: 26rpx;
+    color: #BAB9C7;
+}
+.content-view .title {
+    font-size: 32rpx;
+    color: white;
+    padding-bottom: 15rpx;
+}
+.currentPrice {
+    color: #E44837;
+}
+.bg-img {
+    width: 690rpx;
+    height: 320rpx;
+    position: absolute;
+    /*border-radius: 15rpx;*/
+}
+.icon-img {
+    width: 80rpx;
+    height: 70rpx;
+}
+.info-view {
+    position: absolute;
+    padding: 40rpx 30rpx;
+}
+.car-type-view {
+    margin-top: 60rpx;
+    padding: 0 30rpx 15rpx 0;
+    margin-bottom: 20rpx;
+    border-bottom: 2px #FF904C solid;
+}
+.blackLine{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 70rpx;
+    background-color: #0f1029;
+}
+
+.belong-view {
+    padding: 20rpx 30rpx;
+    background-color: #22233A;
+    font-size: 26rpx;
+    color: #BAB9C7;
+}
+.belong-view .belong-title {
+    font-size: 32rpx;
+    color: white;
+    padding-bottom: 15rpx;
+}
+.belong-view .belong-content{
+    width: 100%;
+    overflow: hidden;
+}
+.belong-view .belong-content .company-logo{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 40rpx;
+    float: left;
+}
+.belong-view .belong-content .company-info{
+    float: left;
+    
+    height: 80rpx;
+    padding-left: 0rpx;
+}
+.company-info .company-name{
+    color:rgba(255,255,255,1);
+    font-size: 28rpx;
+    display: inline-block;
+    width: 100%;
+    height: 40rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.company-info .company-con{
+    color:rgba(186,185,199,1);
+    font-size: 26rpx;
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+    height: 40rpx;
+    line-height: 22rpx;
+}
+.buyNow{
+    height:100rpx; 
+    width: 100%;
+    background:rgba(255,144,76,1);
+    border-radius: 0;
+    margin-top: 10rpx;
+    text-align: center;
+    line-height: 100rpx;
+    color: #fff;
+    position: fixed;
+    bottom: 0
+}
+.bg-view{
+    /*margin-bottom: 100rpx;*/
+}
+.block-block{
+    width: 100%;
+    height: 100rpx;
+}

@@ -1,0 +1,25 @@
+<!--pages/home/selectedCoach.wxml-->
+
+<import src="../../templates/search-item/search-item.wxml"/>
+
+<view class='bg-view'>
+
+<!--   <view class='search-view'>
+    <view class='search-input-view'>
+      <image class='search-icon' src='../../images/icon/search.png' bindtap='bindConfiSearchTap'></image>
+      <input class='search-input' placeholder-class='plh-style' placeholder='输入姓名/电话号码' bindinput='bindSearchInput' bindconfirm='bindConfiSearchTap'></input>
+    </view>
+  </view> -->
+
+  <block wx:for='{{ searchList }}' wx:key='{{ index }}' wx:for-item='search' wx-item="item">
+  <view class='search-cell' id='{{ index }}' bindtap='bindSearchItemTap'>
+    <image class='head-img' src='{{ search.headimg }}'></image>
+    <text class='name-text'>{{ search.name }}</text>
+	
+    <text class='deepGryColor fs28' hidden="{{search.labels == '优势：undefined' }}">{{ search.labels }}</text>
+  </view>
+
+    <!-- <template is='search-item' data='{{ ...search,index }}'/> -->
+  </block>
+
+</view>

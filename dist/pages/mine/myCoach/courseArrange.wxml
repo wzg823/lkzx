@@ -1,0 +1,61 @@
+<view class='view-big'>
+	<view class='view-title'>	
+		<view class='time fl'>
+			{{week[0].detail}}至{{week[6].detail}} 
+		</view>
+		<view class='btn-add fr' bindtap='bindCourseOpenTap'>
+			<image src='../../../images/icon/mine/add_lesson.png'></image>
+		</view>
+		<view style='clear: both;'></view>
+	</view>
+	<view class='table'>
+		<view class='tr clearfix' wx:for='{{tableTr}}' wx:for-item='tr'>
+			<view class='td fl' wx:for='{{week}}' wx:for-item='td' data-id='{{td.date}}-{{tr.hour}}'>
+				<view wx:for='{{selectedTime}}' wx:if="{{item.td == td.date && item.tr == tr.hour}}" class="bookName">
+					被预约
+					<text>{{item.name}}</text>
+					<view hidden='{{item.name}}' class='bookName-no'>有课</view>
+				</view>
+
+			</view>
+		</view>
+		<view class='colum-y'>
+			<text class='hour' wx:for='{{tableTr}}' wx:key="item">{{item.hour}}:00</text>
+			<text>24:00</text>
+		</view>
+	</view>
+	<view class='colum-x'>
+		<view class='td fl' wx:for='{{week}}' wx:key='item'>
+			{{item.date}}
+			<text>{{item.name}}</text>
+		</view>
+	</view>
+	<view class='courseTime' hidden="{{courseTime}}">
+		<view class='courseTime-w'>
+			<view class='timeShow clearfix'>
+				<view>排课时间</view>
+				<view bindtap="bindPickerOpenTap">{{pickedTime}}</view>
+			</view>
+			<view class='btn clearfix'>			
+				<button bindtap='bindCourseCloseTap'>取消</button>
+				<button bindtap='bindCourseConfirmTap'>确定</button>
+			</view>
+		</view>
+		<view class='picker-mask' hidden='{{ pickerViewHidden }}'></view>
+		<view class='picker-box' hidden='{{ pickerViewHidden }}'>
+			<view class='weui-flex picker-title'>
+				<view bindtap='bindPickerCancelTap'>取消</view>
+        		<view class='weui-flex__item'>请选择排课时间</view>
+        		<view bindtap='bindPickerConfirmTap'>确定</view>
+			</view>
+			<picker-view class='picker' indicator-style="height: 50rpx;" value="" bindchange="bindPickerChange">
+    			<picker-view-column>
+      				<view wx:for="{{week}}" style="line-height: 50rpx">{{item.detail}}</view>
+    			</picker-view-column>
+    			<picker-view-column>
+      				<view wx:for="{{hourList}}" style="line-height: 50rpx">{{item}}</view>
+    			</picker-view-column>
+  			</picker-view>
+		</view>
+	</view>
+</view>

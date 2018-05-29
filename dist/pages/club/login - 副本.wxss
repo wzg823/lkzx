@@ -1,0 +1,124 @@
+page{
+	width: 100%;
+	height: 100%;
+}
+.login-view{
+	width: 100%;
+    height: 100%;
+    position: relative;
+}
+.login-bg-img{
+	display: block;
+    width: 100%;
+    height: 100%;
+}
+.login-content{
+	position: absolute;
+	left: 0;
+	top: 100rpx;
+	width: 100%;
+	display:flex;
+  	flex-direction:column;
+  	align-items:center;/*垂直居中*/
+  	justify-content: center;/*水平居中*/
+}
+.login-logo{
+	width: 400rpx;
+	height: 90rpx;
+
+}
+.login-form{
+	margin-top: 145rpx;
+}
+.login-form input{
+	width: 460rpx;
+	height: 90rpx;
+	border-radius: 6px;
+	border: 1rpx solid #fff;
+	font-size: 30rpx;
+	padding-left: 20rpx;
+}
+.verCode-item{
+	position: relative;
+}
+.verCode-item input{
+	width: 460rpx;
+	border-radius: 6px;
+	margin-top: 50rpx;
+}
+.login-form button{
+	width: 480rpx;
+	height: 80rpx;
+	background:rgba(255,144,76,1);
+	border-radius: 6px;
+	border: 1px solid rgba(255,144,76,1);
+	font-size: 30rpx;
+	line-height: 76rpx;
+	text-align: center;
+	color: #fff;
+	margin-top: 50rpx;
+}
+.verCode-item view{
+	width: 160rpx;
+	height: 90rpx;
+	background-color: rgba(255,255,255,0);
+	position: absolute;
+	right: 0rpx;
+	bottom: 2rpx;
+	line-height: 92rpx;
+	text-align: center;
+	color:#BAB9C7;
+	font-size: 24rpx;
+	border-left: 1px solid #fff;
+	z-index: 999;
+}
+.login-form text{
+	width: 100%;
+	text-align: center;
+	font-size: 24rpx;
+	color:#BAB9C7;
+	padding-left: 20rpx;
+}
+.login-gym{
+	color:rgba(255,255,255,1);
+	font-size: 40rpx;
+	width: 100%;
+}
+.gym-title{
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+.gym-cell-scrollview {
+    height: 400rpx;
+    margin-top: 95rpx;
+    width: 100%;
+}
+.gym-cell {
+    text-align:left;
+    width: calc(100% - 200rpx);
+    padding: 30rpx 100rpx;
+
+}
+.checked-box {
+    width: 37rpx;
+    height: 37rpx;
+    margin-top: 6rpx;
+}
+
+.weui-flex__item{
+	font-size: 30rpx;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.gym-btn{
+	width: 480rpx;
+	height: 90rpx;
+	background:rgba(255,144,76,1);
+	border-radius: 6px;
+	text-align: center;
+	line-height: 90rpx;
+	color: #fff;
+	margin-top: 95rpx;
+}

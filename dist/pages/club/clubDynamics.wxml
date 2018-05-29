@@ -1,0 +1,38 @@
+<!--pages/club/clubDynamics.wxml-->
+
+<import src="../../templates/empty-view/empty-view.wxml"/>
+
+<view class='bg-view'>
+
+  <view wx:if='{{ clubdyList.length > 0 }}'>
+  <view class='clubdy-cell' wx:for='{{ clubdyList }}' wx:key='{{ index }}' id='{{ item.id }}' bindtap='bindClubdyCellTap'>
+    
+    <!-- <view class='weui-flex' id='{{ item.id }}' bindtap='bindClubdyCellTap'> -->
+      <image class='titleImg' mode='aspectFill' src='{{ item.titleImg }}'></image>
+      <view class='title-text-view'>
+        <!-- <view class='title-text'>{{ item.title }}</view> -->
+        {{ item.summary }}
+      </view>
+    <!-- </view> -->
+    <!-- <vier class="block-block"></vier> -->
+    <view class='down-view'>
+      
+      <view class='author-view'>
+        <text>{{ item.author }}</text>
+        <!-- <view class='good-view' id='{{ index }}' bindtap='bindGoodSelectedTap'>
+          <image class='good-icon' src='../../images/icon/club/{{ item.isGoodSelected ? "zan_y" : "zan_g" }}.png'></image>
+          <text class='{{ item.isGoodSelected ? "mainColor" : "" }}'>{{ item.goodNum }}</text>
+        </view> -->
+      </view>
+      <view class='time-view'>
+        <text>{{ item.time }}</text>
+      </view>
+    </view>
+
+  </view>
+  </view>
+
+  <!-- 无 更多 -->
+  <template wx:else is='empty-view' data='{{ emptyText, emptyIcon }}'/>
+
+</view>

@@ -1,0 +1,70 @@
+<!--pages/club/clubDynamicsDetail.wxml-->
+<import src="../../templates/article/article.wxml"/>
+<import src="../../wxParse/wxParse.wxml"/>
+
+
+<view class='bg-view'>
+
+<!--   <view class="article-banner">
+    <image class="article-banner-img" src="{{article.poster}}"></image>
+  </view> -->
+
+<view class="article-title">
+  <text>{{article.title}}</text>
+</view>
+
+<view class="article-au-ti">
+  <text class="article-author">作者：{{article.author}}</text>
+</view>
+
+<view class="article-profiles">
+  <text>简介：{{article.introduction}}</text>
+</view>
+
+
+
+  <!-- title -->
+  <!-- <view class="article-title">{{ article.title }}</view> -->
+
+  <!-- 作者 简介 -->
+<!--   <view wx:if="{{ article.author }}" class='author-introduction-view'>{{ article.author }}</view>
+  <view wx:if="{{ article.introduction }}" class='author-introduction-view'>简介：{{ article.introduction }}</view> -->
+
+  <!-- 第一张 海报 -->
+<!--   <view class="poster-image-container">
+    <image class="poster-image" src="{{ article.poster }}" mode="{{ ac === 'CT'? 'widthFix': 'aspectFill' }}" catchtap="{{ previewPosterImage || 'previewPosterImage' }}" data-src="{{ article.poster }}"/>
+  </view> -->
+
+
+
+  <!-- <template is="article" data="{{ title: article.title, poster: article.poster, author: article.author, introduction: article.introduction, contents: article.contents }}"/> -->
+
+  <!-- <view class='article-view'>
+
+    <view class='article-title-view'>
+      <view class='article-title'>{{ article.title }}</view>
+      <view class='weui-flex author-view'>
+        <view class='weui-flex__item'>作者：{{ article.author }}</view>
+        <view class='weui-flex__item good-view' id='{{ index }}' bindtap='bindGoodSelectedTap'>
+          <image class='good-icon' src='../../images/icon/club/{{ article.isGoodSelected ? "zan_y" : "zan_g" }}.png'></image>
+          <text class='{{ article.isGoodSelected ? "mainColor" : "" }}'>{{ article.goodNum }}</text>
+        </view>
+      </view>
+      <view class='article-introduction'>简介：{{ article.introduction }}</view>
+    </view>
+
+    <view>
+      <image class='article-img' mode='aspectFill' src='{{ article.articleImg }}'></image>
+    </view>
+
+    <view class='article-content-view'>
+      <view class='title'>内容详情</view>
+      <view>{{ article.contents }}</view>
+    </view>
+
+  </view> -->
+
+
+<template is="wxParse" data="{{wxParseData:text.nodes}}"/>
+
+</view>

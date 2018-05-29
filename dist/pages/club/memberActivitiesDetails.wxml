@@ -1,0 +1,81 @@
+<!--pages/club/memberActivitiesDetails.wxml-->
+
+
+<view class='bg-view' wx:if='{{ activities != null }}'>
+
+  <view class='title-view'>
+    <view>
+      <!-- <button class='share-btn' open-type='share'> -->
+        <button class='share-btn' bindtap='testJupm'>
+        <image class='share-icon' src='../../images/icon/club/share.png' ></image>
+      </button>
+      <image class='img' mode='aspectFill' src='{{ activities.titleImg }}'></image>
+      <view wx:if='{{ !clock }}' class='down-view'>
+        {{ activities.timeTitle }}
+        <view class='timer-text'>{{ days }}</view>天
+        <view class='timer-text'>{{ hour }}</view>时 
+        <view class='timer-text'>{{ mints }}</view>分 
+        <view class='timer-text'>{{ second }}</view>秒 
+      </view>
+      <view wx:else class='down-view'>{{clockStatus}}</view>
+    </view>
+  </view>
+
+  <view class='introduction-view'>
+    <view class='fs36 whiteColor'>{{ activities.title  }}</view>
+    <view class='intr-text'>{{ activities.introduction }}</view>
+    <!-- <view>
+      <image class='people-icon' src='../../images/icon/club/people.png'></image>
+      <text>{{ activities.nowNum }}/{{ activities.totalNum }}</text>
+    </view> -->
+  </view>
+
+  <view class='card-view clearfix' wx:if='{{ activities.cards.length > 0 }}'>
+    <view class="blackLine"></view>
+    <view class='card-item' data-cards='{{ item }}' wx:for='{{ activities.cards }}' wx:key='{{ index }}'>      
+      <view class="card-item-price">
+        <text class="newPrice">￥{{ item.currentPrice }}</text>
+        <text class="activePrice">活动价</text>
+        <text class="oldPrice">￥{{ item.originalPrice }}</text>
+        <text class="leftKan">仅剩{{activities.totalNum - activities.nowNum}}件</text>
+
+      </view>
+      <view class="card-item-con clearfix" wx:if="{{isCard}}">
+        <image mode='aspectFill' class='bg-img' src='{{cardInfo.pic_url}}'></image>
+        <view class='info-view'>
+        <view><image class='icon-img' src='../../images/icon/home/car/yepao_logo.png'></image></view>
+        <view class='car-type-view'>{{cardInfo.prj_name}}</view>
+        <view>¥{{cardInfo.act_price}}</view>
+        </view>
+      </view>
+      <!-- <image class='card-bgimg' src='../../images/icon/club/card_bg.jpg'></image>
+      <view class='name-view'>
+        <view class='name'>{{ item.cardName }}</view>
+        <text class='originalPrice'>原价：{{ item.originalPrice }}</text>
+        <text class='currentPrice'>现价：{{ item.currentPrice }}</text>
+      </view> -->
+    </view>
+  </view>
+
+  <view class='content-view'>
+    <view class='title'>活动详情</view>
+    <view class='content'>{{ activities.activitiesDetails }}</view>
+  </view>
+
+  <view class="belong-view">
+    <view class='belong-title'>活动所有</view>
+    <view class='belong-content clearfix'>
+<!--       <image class="company-logo" src="{{gymInfo.logo_url}}"></image> -->
+      <view class="company-info">
+        <text class="company-name">{{gymInfo.gym_name}}</text>
+        <text class="company-con">{{gymInfo.addr}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="block-block"></view>
+
+<button class="buyNow" data-card="{{cardInfo}}" id="{{cardInfo.prj_id}}" wx:if="{{isBuy}}" bindtap="bindCardItemTap">立即购买</button>
+<!-- 认证弹窗 -->
+<certificationModal modal-hidden="{{ is_modal_Hidden }}" modal-isCertificationMem="{{ isCertificationMem }}" /> 

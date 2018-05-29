@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/club/login",
+    "pages/mine/manager/manager",
+    "pages/mine/mine",
+    "pages/home/myClass",
+    "pages/home/personalTrainer",
+    "pages/home/home",
+    "pages/mine/myCoach/myCoachListView",
+    "pages/home/scanCode",
+    "pages/mine/myCoach/beReservedCourse",
+    "pages/mine/myCoach/qrCode",
+    "pages/mine/myCoach/myBookingClass",
+    "pages/home/personalTrainerOrder",
+    "pages/mine/myCoach/courseArrange",
+    "pages/home/classSchedule",
+    "pages/mine/myData",
+    "pages/home/membershipCard",
+    "pages/club/club",
+    "pages/mine/infoTransfer",
+    "pages/club/memberActivitiesDetails",
+    "pages/club/clubDynamics",
+    "pages/club/memberActivities",
+    "pages/mine/myMember/custTraIntentionFollow",
+    "pages/mine/myMember/custTraIntentionPrepay",
+    "pages/mine/myMember/customerTrackingIntention",
+    "pages/mine/myMember/customerTracking",
+    "pages/club/clubDynamicsDetails",
+    "pages/home/classScheduleDetails",
+    "pages/home/myClassDetails",
+    "pages/home/onlinePaymentForClass",
+    "pages/home/onlinePaymentForCard",
+    "pages/mine/selectedMem",
+    "pages/mine/myMember/memberInfoRegistration",
+    "pages/mine/myMember/myMember",
+    "pages/home/recommendedCourses",
+    "pages/home/membershipCardDetails",
+    "pages/home/buyMembershipCard",
+    "pages/mine/courseShare/courseShareDetails",
+    "pages/message/message",
+    "pages/mine/myCoach/privateMember",
+    "pages/mine/myCoach/courseTraining",
+    "pages/mine/myCoach/courseCustom",
+    "pages/mine/courseShare/courseShare",
+    "pages/message/messageDetails",
+    "pages/home/selectedCoach",
+    "pages/mine/myOrderListView",
+    "pages/club/goToshuibian",
+    "pages/mine/myCoach/registerCustomers"
+    
+  ],
+  "window": {
+    "backgroundColor": "#22233a",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#22233a",
+    "navigationBarTitleText": "力康健身",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#848296",
+    "backgroundColor": "#22233a",
+    "borderStyle": "#ffffff",
+    "selectedColor": "#ff904c",
+    "list": [
+      {
+        "pagePath": "pages/club/club",
+        "text": "主页",
+        "iconPath": "images/icon/tabBar_icon/home.png",
+        "selectedIconPath": "images/icon/tabBar_icon/home_y.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "服务",
+        "iconPath": "images/icon/tabBar_icon/club.png",
+        "selectedIconPath": "images/icon/tabBar_icon/club_y.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "images/icon/tabBar_icon/message.png",
+        "selectedIconPath": "images/icon/tabBar_icon/message_y.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/icon/tabBar_icon/mine.png",
+        "selectedIconPath": "images/icon/tabBar_icon/mine_y.png"
+      }
+    ]
+  }
+}

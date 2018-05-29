@@ -1,0 +1,34 @@
+<!--pages/club/memberActivities.wxml-->
+
+<import src="../../templates/empty-view/empty-view.wxml"/>
+<import src="../../templates/club-item/club-item.wxml"/>
+
+<view class='bg-view'>
+
+  <!-- 推荐活动 -->
+  <!-- <template wx:if='{{ clubList.length > 0 }}' is='club-item' data='{{ clubList }}'/> -->
+  <block wx:if='{{ clubList.length > 0}}' wx:for='{{ clubList }}' wx:key='{{ index }}'>
+  	<view class="limit-activities-item" id="{{item.activeId}}" bindtap="bindClubCellTap">
+  		<view class="limit-activities-banner clearfix">
+  			<image class="limit-activities-img" src="{{item.titleImg}}"></image>
+  			<view class="limit-activities-block">
+  				<text class="limit-activities-surplus">仅剩{{item.totalPeople - item.nowPeople}}件</text>
+  				<text class="limit-activities-status">{{item.status}}...</text>
+  			</view>
+  		</view>
+  		<view class="limit-activities-content">
+  			<text class="activite-title">{{item.title}}</text>
+  			<text class="activite-introduce">{{item.summary}}</text>
+  			<view class="activite-price" wx:if="{{hasPrice}}">
+  				<text class="newPrice">￥{{item.act_price}}</text>
+  				<text class="oldPrice">￥{{item.price}}</text>
+  				<button class="buyNow" id='{{ item.activeId }}' bindtap="bindClubCellTap" wx:if="isBuy">立即购买</button>
+  			</view>
+  		</view>
+  	</view>
+  </block>
+
+  <!-- 无 更多 -->
+  <!-- <template wx:else is='empty-view' data='{{ emptyText, emptyIcon }}'/> -->
+
+</view>

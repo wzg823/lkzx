@@ -1,0 +1,62 @@
+<view class='page'>
+	<view class='month-pick clearfix'>
+		<view class='prew'>
+			<image src='../../../images/icon/mine/turning_left.png'></image>
+		</view>
+		<view class='month-show'>2018 05.01-05.31</view>
+		<view class='next'>
+			<image src='../../../images/icon/mine/turning_right.png'></image>
+		</view>
+	</view>
+	<view class='customer-data'>
+		<view class='customer-data-title'>
+			<image src='../../../images/icon/mine/data.png'></image>
+			<text>客户数据汇总</text>
+		</view>
+		<view class='customer-data-con'>
+			<view class='customer-num'>
+				<text>客户总数</text>
+				<text>668人</text>
+			</view>
+			<view class='topFive'>
+				<text>李小鹏的客户最多</text>
+				<view class='top-check'>本月销售Top5
+					<image src='../../../images/icon/mine/down.png'></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class='customer-table'>
+		<view class='tr clearfix'>
+			<view class='td'>会籍</view>
+			<view class='td'>客户数</view>
+			<view class='td'>会员数</view>
+		</view>
+		<view class='tr clearfix'>
+			<view class='td'>王小雨</view>
+			<view class='td'>350</view>
+			<view class='td'>132</view>
+		</view>
+		<view class='tr clearfix'>
+			<view class='td'>赛可</view>
+			<view class='td'>335</view>
+			<view class='td'>123</view>
+		</view>
+		<view class='tr clearfix'>
+			<view class='td'>赛可</view>
+			<view class='td'>335</view>
+			<view class='td'>123</view>
+		</view>
+		<view class='tr clearfix'>
+			<view class='td'>赛可</view>
+			<view class='td'>335</view>
+			<view class='td'>123</view>
+		</view>
+	</view>
+	<view class='sale-rank'>
+		<view class='sale-rank-title'>
+			<image src='../../../images/icon/mine/data.png'></image>
+			<text>客户数据汇总</text>
+		</view>
+	</view>
+</view>

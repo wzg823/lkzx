@@ -1,0 +1,7 @@
+<view class='scan-title'>
+	<image src='{{ pt_pic_url == "" ? "../../images/icon/default_headimg.png" : default_headimg }}'></image>
+	<text>{{pt_name}}</text>
+</view>
+<view class='scan-con'>确认上{{start_time}}:00-{{end_time}}:00的{{type_flag == 001? '团课':'私课'}}</view>
+<view class='scan-pt'>课程教练：{{pt_name}}</view>
+<button class='scan-btn' data-flag="{{type_flag}}" data-card="{{user_card_info}}" data-id="{{id}}" bindtap='bindConfirmClassInfo'>确认</button>

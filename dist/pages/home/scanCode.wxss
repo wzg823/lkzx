@@ -1,0 +1,35 @@
+.scan-title{
+	
+}
+.scan-title image{
+	display: block;
+	margin: 82rpx auto;
+	margin-bottom: 30rpx;
+	width: 90rpx;
+	height: 90rpx;
+	border-radius: 45rpx;
+}
+.scan-title text{
+	display: block;
+	width: 100%;
+	text-align: center;
+}
+.scan-con{
+	margin-top: 100rpx;
+	font-size: 40rpx;
+	text-align: center;
+	font-weight: 100;
+}
+.scan-pt{
+	margin-top: 35rpx;
+	text-align: center;
+	width: 100%;
+	color: #BAB9C7;
+}
+.scan-btn{
+	width: 90%;
+	margin-top: 70rpx;
+	background-color: #FF904C;
+	border-radius: 0;
+	color: #fff;
+}

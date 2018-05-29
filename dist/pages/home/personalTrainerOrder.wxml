@@ -1,0 +1,26 @@
+<view class='big-view'>
+	<view class='title-view'>
+		<image src='{{headImg}}'></image>
+		<text>{{coachName}}</text>
+	</view>
+	<view class='calendar'>
+		<view class='date'>
+			<block wx:for='{{week}}' wx:for-index='i'>
+			<view class='date-item' data-detail='{{item.detail}}' data-num='{{i}}' bindtap='bindChoseDay'>
+				<text>{{item.name}}</text>
+				<text class="{{i==_today?'today':''}}">{{i==0?'今':item.date}}</text>
+			</view>
+			</block>
+		</view>
+		<view class='time' wx:if="{{timesList!=''}}">
+			<block wx:for='{{timesList}}'>
+				<view wx:if='{{!item.reserveFlag}}' class='time-item {{index==_time?"choseTime":""}}' data-num='{{index}}' bindtap='bindChoseTime' data-time='{{item.start_time}}:00-{{item.end_time}}:00' data-id='{{item.id}}'>{{item.start_time}}:00-{{item.end_time}}:00</view>
+				<view wx:else class='time-item enableTime' data-num='{{index}}' bindtap=''>{{item.start_time}}:00-{{item.end_time}}:00</view>
+			</block>
+		</view>
+		<view wx:else class='no-class'>
+			暂无私教排课信息
+		</view>
+	</view>
+	<button bindtap='bindConfirm'>确定</button>
+</view>

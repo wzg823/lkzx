@@ -1,0 +1,48 @@
+<!--pages/mine/myCoach/myCoachListView.wxml-->
+
+<!-- <import src="../../../templates/imgText-item/imgText-item.wxml"/> -->
+
+
+<view class='bg-view'>
+<view class='view-list'>
+	<block wx:for='{{yItems}}' wx:for-item='item'>
+		<view class='coach-item' id='{{item.navigateUrl}}' bindtap="bindNavigateTap">
+			<image src='{{item.iconUrl}}'></image>
+			<text>{{item.name}}</text>
+		</view>
+	</block>
+	<view style="clear: both;"></view>
+</view>
+<view class='view-briefing'>
+	<view class='briefing-title'>
+		<image src='../../../images/icon/mine/briefing.png'></image>
+		<text>简报</text>
+		<view class='briefing-date'>
+			<view class="{{_date==1?'date-left current-date':'date-left'}}" data-num="1" bindtap="changeDate">
+				今天
+			</view>
+			<view class="{{_date==2?'date-right current-date':'date-right'}}" data-num="2" bindtap="changeDate">
+				昨天
+			</view>
+		</view>
+	</view>
+	<view class='briefing-content-w'>
+		<view class='briefing-content clearfix'>
+			<view class='con-left'>
+				团课预约上课人数
+				<text>{{leagueClassNum}}人</text>
+			</view>
+			<view class='con-right'>
+				团课签到人数
+				<text>{{leagueClassSign}}人</text>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- y 排列 item  原版-->
+<!--   <view class='y-item-view'>
+    <template is="imgText-item" data="{{ yItems, rightItemHidden }}"/>
+</view> -->
+<!-- 原版 -->
+</view>

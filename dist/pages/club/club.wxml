@@ -1,0 +1,125 @@
+<!--pages/club/club.wxml-->
+
+<import src="../../templates/club-item/club-item.wxml"/>
+<import src="../../templates/empty-view/empty-view.wxml"/>
+<view class='bg-view'>
+
+<!--   <block wx:if='{{ clubList.length > 0 }}'> -->
+  <view class='top'>
+  <!-- 轮播图 -->
+  <swiper class='swiper' indicator-dots="true"
+          indicator-color="#ffffff"
+          indicator-active-color="#FF904C"
+          autoplay="true" >
+  <block wx:for="{{ swiperImgUrls }}" wx:key='{{ index }}'>
+    <swiper-item>
+      <image mode='aspectFill' class='swiper-img' src="{{ item }}"/>
+    </swiper-item>
+  </block>
+  </swiper>
+ 
+  <!-- item 上一版代码--> 
+<!--   <view class='club-item-view'>
+    <view class='weui-flex'>
+      <view class='weui-flex__item club-item' bindtap='bindMemberActivitiesTap'>
+        <image class='club-item-icon' src='../../images/icon/club/mem_ats.png'></image>
+        <view>会员活动</view>
+      </view>
+      <view class='weui-flex__item club-item' bindtap='bindClubDynamicsTap'>
+        <image class='club-item-icon' src='../../images/icon/club/club_dynamic.png'></image>
+        <view>俱乐部动态</view>
+      </view>
+    </view>
+  </view> -->
+  <view class='shop'>{{gymInfo}}</view>
+  </view>
+
+  <!-- 推荐活动 -->
+  <!-- <view wx:if='{{ clubList.length > 0 }}'> -->
+  <view>
+    <view>
+      <!-- <template is='club-item' data='{{ clubList }}'/> -->
+      <!-- 限时活动 -->
+      <view class="limit-item-box clearfix">
+        <view class='recommend-title-view'>
+          <image class="recommend-title-icon" src="../../images/icon/time_limit.png"></image>
+          限时活动
+          <view class="recommend-title-more" bindtap="bindMemberActivitiesTap" data-activeFlag="0">查看全部<i>></i></view>
+        </view>
+        <block wx:for="{{buyCardActiveList}}" wx:for-item="item" wx:for-index="i" wx:if="{{hasCards}}">
+          <view class="limit-item" id="{{item.id}}" bindtap="bindClubCellTap">
+            <image class="limit-item-img" src="{{limitImgs[i]}}"></image>
+            <text>{{item.title}}</text>  
+            <text>仅剩{{item.totalPeople - item.nowPeople}}件</text>
+          </view>
+        </block>
+        <view hidden="{{hasCards}}">
+          <text class="limit-empty">暂无活动</text>
+          <template is="empty-view" data="{{...emptyData}}"></template>
+        </view>
+        
+      </view>
+      <!-- 会员活动 -->
+      <view class="vip-active-box">
+        <view class='recommend-title-view'>
+          <image class="recommend-title-icon" src="../../images/icon/member.png"></image>
+          会员活动
+          <view class="recommend-title-more" bindtap="bindMemberActivitiesTap" data-activeFlag="1">查看全部<i>></i></view>
+        </view>
+        <view class="vip-item-box" wx:if="{{hasActivities}}">
+          <scroll-view class="scroll-view_H" scroll-x>
+            <view class='scroll-h-item' wx:for="{{memActiveList}}" wx:for-item="item" id="{{item.id}}" bindtap="bindClubCellTap">
+              <image src='{{item.picUrl}}'></image>
+              <view class="vip-item-mosk"></view>
+              <text>{{item.title}}</text>
+            </view>
+          </scroll-view>
+        </view>
+        <view hidden="{{hasActivities}}">
+          <text class="limit-empty">暂无活动</text>
+          <template is="empty-view" data="{{...emptyData}}"></template>
+        </view>
+      </view>
+      <!-- 俱乐部动态 -->
+      <view class="club-item-box clearfix">
+        <view class='recommend-title-view'>
+          <image class="recommend-title-icon" src="../../images/icon/club.png"></image>
+          俱乐部动态
+          <view class="recommend-title-more" bindtap="bindClubDynamicsTap" data-activeFlag="1">查看全部<i>></i></view>
+        </view>
+        <block wx:for='{{ articleList }}' wx:key='{{ index }}' id='{{ item.id }}' wx:if="{{hasArticle}}">        
+          <view class="club-item" bindtap='bindClubdyCellTap' id='{{ item.id }}'>
+            <image class="club-item-img" src="{{item.titleImg}}"></image>
+            <text class="club-item-tit">{{item.title}}</text>
+            <text class="club-item-tip">
+              <text class="club-item-tip-username">{{item.author}}</text>
+              <text>{{item.time}}</text>
+            </text>
+          </view>
+        </block>
+        <view hidden="{{hasArticle}}">
+          <text class="limit-empty">暂无动态</text>
+          <template is="empty-view" data="{{...emptyData}}"></template>
+        </view>
+      </view>
+    </view>
+
+    <!-- 上拉加载 内容 提示 -->
+    <view class="weui-loadmore" hidden='{{ loadMoreHidden }}'>
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+    <!-- 到底 提示 -->
+    <view class="weui-loadmore weui-loadmore_line" hidden='{{ loadMoreRemaindHidden }}'>
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">到底啦</view>
+    </view>
+
+  </view>
+
+<!--   <view hidden='{{ clubList.length > 0 }}' class='empty-view'>暂无活动</view> -->
+
+
+</view>
+
+<!-- 认证弹窗 -->
+<certificationModal modal-hidden="{{ is_modal_Hidden }}" modal-isCertificationMem="{{ isCertificationMem }}" />  

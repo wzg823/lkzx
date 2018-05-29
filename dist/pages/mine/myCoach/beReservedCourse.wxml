@@ -1,0 +1,68 @@
+<!--pages/home/myClass.wxml-->
+
+<import src="../../templates/empty-view/empty-view.wxml"/>
+
+<view class='bg-view'>
+
+  <view>
+  <view class="tap-nav clearfix">
+    <view bindtap='bindChoseAllCourse' data-num='0' class='{{toggleCourse==0?"current":""}}'>全部</view>
+    <view bindtap='bindChoseLeagueCourse' data-num='1' class='{{toggleCourse==1?"current":""}}'>团课</view>
+    <view bindtap='bindChosePrivateCourse' data-num='2' class='{{toggleCourse==2?"current":""}}'>私教课</view>
+  </view>
+  <view class='title-view'>{{today}}</view>
+
+  <view class='myclass-cell-view'>
+    <block wx:for='{{ LeagueCourse }}' wx:key='{{ index }}'>
+    <view class='myclass-cell' hidden='{{League}}'>
+      <view class='top-view'>
+        <text>上课时间：{{item.start_time}}-{{item.end_time}}</text>
+        <text>{{item.flag}}</text>
+      </view>
+      <view class='blank'></view>
+      <!-- 上 -->
+      <view class='up-view weui-flex'>
+        <view>
+          <image class='headimg' mode='aspectFill' src='../../../images/icon/default_headimg.png'></image>
+        </view>
+        <view class='info-view weui-flex__item'>
+          <view class='name-text'>{{ item.plan_name}}(团)</view>
+          <!-- <view></view> -->
+        </view>
+        <view class='erwei'>
+          <image src='../../../images/icon/erwei.png' data-id='{{item.id}}' data-flag='001' bindtap='getQcCode'></image>
+        </view>
+      </view>
+    </view>
+    </block>
+    <block wx:for='{{ PrivateCourse }}' wx:key='{{ index }}'>
+      <view class='myclass-cell' hidden='{{Private}}'>
+      <view class='top-view'>
+        <text>上课时间：{{item.start_time}}:00-{{item.end_time}}:00</text>
+        <text>{{item.flag}}</text>
+      </view>
+      <view class='blank'></view>
+      <!-- 上 -->
+      <view class='up-view weui-flex'>
+        <view>
+          <image class='headimg' mode='aspectFill' src='../../../images/icon/default_headimg.png'></image>
+        </view>
+        <view class='info-view weui-flex__item'>
+          <view class='name-text'>{{item.class_name}}(私)</view>
+          <view>会员：{{ item.mem_name }}</view>
+        </view>
+        <view class='erwei'>
+          <image src='../../../images/icon/erwei.png' data-user='{{item.user_card_id}}' data-class='{{item.class_id}}' data-mem='{{item.mem_id}}' data-flag='002' data- bindtap='getQcCode'></image>
+        </view>
+      </view>
+    </view>
+    </block>
+
+
+  </view>
+
+  </view>
+<!-- 
+  <template wx:else is='empty-view' data='{{ emptyText, emptyIcon }}'/>  -->
+
+</view>

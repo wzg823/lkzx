@@ -1,0 +1,61 @@
+<view>
+	<view class="top-part">
+		<view class="date-select clearfix">
+			<view class="left-btn fl" bindtap="reduceDate">
+				<image src="../../images/icon/turn-left.png"></image>
+			</view>
+			<text class="date-view fl">{{date}}</text>
+			<view class="right-btn fr" bindtap="addDate">
+				<image src="../../images/icon/turn-right.png"></image>
+			</view>
+		</view>
+		<view class="kcal-data">
+			<view class="circle">
+				<image src="../../images/icon/circle.png"></image>
+				<text>{{kcal}}</text>
+				<text>已消耗kcal</text>
+			</view>
+		</view>
+		<view class="sport-data clearfix">
+			<view class="sport-time fl">
+				<text><text style="font-size: 40rpx;display: inline;">{{time}}</text>分钟</text>
+				<text>运动时长</text>
+			</view>
+			<view class="sport-project fr">
+				<text><text style="font-size: 40rpx;display: inline;">{{project}}</text>项</text>
+				<text>运动项目</text>
+			</view>
+		</view>
+	</view>
+	<view class="bottom-part">
+		<view class="table clearfix">
+			<block wx:for="{{tableBlock}}">
+				<view class="table-item fl"></view>
+			</block>
+			<block wx:for="{{tableStand}}">
+				<view class="table-item-stand"></view>
+			</block>
+		</view>
+		<view class="column">
+			<block wx:for="{{personData}}" wx:key="item">	
+			<view class="column-item" wx:if="{{item.kcal >= 400}}" style="height: 400rpx">
+				<view class="point">
+					<text>{{item.kcal}}Kcal</text>
+					<view>·</view>
+				</view>
+			</view>
+			<view class="column-item" wx:else style="height: {{item.kcal}}rpx">
+				<view class="point">
+					<text>{{item.kcal}}Kcal</text>
+					<view>·</view>
+				</view>
+			</view>
+			</block>
+		</view>
+		<view class="date-week">
+			<block wx:for="{{personData}}" wx:key="item">
+			<text>{{item.date}}</text>
+			</block>
+		</view>
+	</view>
+</view>

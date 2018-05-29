@@ -1,0 +1,40 @@
+<!--pages/home/myClass.wxml-->
+
+<import src="../../templates/empty-view/empty-view.wxml"/>
+
+<view class='bg-view'>
+
+  <view wx:if='{{ myclassList.length > 0 }}'>
+
+  <view class='title-view'>请尽快到店里参加您所需要的课程<image src='../../images/icon/order_class.png' bindtap='bindScanCode'></image></view>
+
+  <view class='myclass-cell-view'>
+    <block wx:for='{{ myclassList }}' wx:key='{{ index }}'>
+    <view class='myclass-cell'>
+      <!-- 上 -->
+      <view class='up-view weui-flex'>
+        <view>
+          <image class='headimg' mode='aspectFill' src='{{ item.headimg }}'></image>
+        </view>
+        <view class='info-view weui-flex__item'>
+          <view class='name-text'>
+            <text>{{ item.className + "（" + item.classType + "）" }}</text>
+            <view class='{{item.classStatus == "待使用"?"class-status-on":"class-status"}}'>{{item.classStatus}}</view>
+            <view style='clear: both;'></view>
+          </view>
+          <view>教练：{{ item.teacherName }}</view>
+        </view>
+      </view>
+      <!-- 下 -->
+      <view class='bottom-view'>预约时间：{{ item.classTime }}
+        <view class='{{ item.classStatus == "待使用" ? "btn cancel" : "" }}' id='{{ index }}' data-orderid='{{ item.orderId }}' data-type='{{item.type}}' bindtap='{{ item.classStatus == "待使用" ? "bindClassStatusTap" : "" }}'>{{ item.classStatus == '待使用'? '取消课程':''}}</view>
+      </view>
+    </view>
+    </block>
+  </view>
+
+  </view>
+
+  <template wx:else is='empty-view' data='{{ emptyText, emptyIcon }}'/> 
+
+</view>

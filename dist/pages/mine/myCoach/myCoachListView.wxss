@@ -1,0 +1,101 @@
+/* pages/mine/myCoach/myCoachListView.wxss */
+
+.view-list{
+	background-color: rgb(34, 35, 58);
+	padding: 32rpx;
+}
+.coach-item{
+	float: left;
+	margin-left: 100rpx;
+	margin-bottom: 40rpx;
+}
+.coach-item image{
+	width: 90rpx;
+	height: 90rpx;
+}
+.coach-item text{
+	display: block;
+	font-size: 24rpx;
+	color:rgba(186,185,199,1);
+}
+.coach-item:nth-child(1),.coach-item:nth-child(5){
+	margin: 0
+}
+.coach-item:nth-child(6){
+	margin-left: 76rpx;
+	margin-bottom: 0;
+}
+.coach-item:nth-child(5){
+	margin-bottom: 0;
+}
+.view-briefing{
+	background-color: rgb(34, 35, 58);
+	padding: 32rpx;
+	margin-top: 20rpx;
+	position: relative;
+}
+.view-briefing image{
+	width: 40rpx;
+	height: 40rpx;
+}
+.view-briefing text{
+	position: absolute;
+	top: 26rpx;
+	left: 80rpx;
+	font-size: 30rpx;
+}
+.briefing-date{
+	float: right;
+}
+.briefing-date >view{
+	float: left;
+	width: 100rpx;
+	height: 40rpx;
+	border: 1px solid rgb(186, 185, 199);
+	font-size: 24rpx;
+	text-align: center;
+	line-height: 40rpx;
+}
+.briefing-date .current-date{
+	color: rgb(255, 144, 76);
+	border: 1px solid rgb(255, 144, 76);
+}
+.date-left{
+	
+}
+.date-right{
+
+}
+.briefing-content-w{
+	width: 100%;
+	margin-top: 40rpx;
+}
+.briefing-content{
+	width: 100%;
+}
+.briefing-content >view{
+	float: left;
+	width: calc(50% - 2px);
+	border: 2rpx solid rgb(132, 130, 150);
+	height: 150rpx;
+	text-align: center;
+	line-height: 80rpx;
+	color: rgb(186, 185, 199);
+	font-size: 24rpx;
+	position: relative;
+}
+.con-right{
+	border-left: none;
+	margin-left: -1rpx;
+}
+.clearfix {
+    overflow: auto;
+    _height: 1%;
+}
+.con-left text,.con-right text{
+	position: absolute;
+	top: 60rpx;
+	left: 40%;
+	font-size: 36rpx;
+	color: #fff;
+}
